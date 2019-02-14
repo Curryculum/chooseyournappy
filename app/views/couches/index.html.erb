@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Couches</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Marque</th>
+      <th>Modele</th>
+      <th>Taille</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @couches.each do |couch| %>
+      <tr>
+        <td><%= couch.marque %></td>
+        <td><%= couch.modele %></td>
+        <td><%= couch.taille %></td>
+        <td><%= couch.user %></td>
+        <td><%= link_to 'Show', couch %></td>
+        <td><%= link_to 'Edit', edit_couch_path(couch) %></td>
+        <td><%= link_to 'Destroy', couch, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Couch', new_couch_path %>

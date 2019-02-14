@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Marque:</strong>
+  <%= @couch.marque %>
+</p>
+
+<p>
+  <strong>Modele:</strong>
+  <%= @couch.modele %>
+</p>
+
+<p>
+  <strong>Taille:</strong>
+  <%= @couch.taille %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @couch.user %>
+</p>
+
+<%= link_to 'Edit', edit_couch_path(@couch) %> |
+<%= link_to 'Back', couches_path %>
